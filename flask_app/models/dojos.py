@@ -1,4 +1,5 @@
 from ..config.mysqlconnections import connectToMySQL
+from flask import flash
 
 class Dojo:
     def __init__(self, data):
@@ -16,7 +17,7 @@ class Dojo:
     def get_all(cls):
         query = "SELECT * FROM dojos;"
         results = connectToMySQL('dojo_survey_schema').query_db(query)
-        print(results)
+
         dojos = []
 
         for row in results:
@@ -36,3 +37,25 @@ class Dojo:
         query = "SELECT * FROM dojos ORDER BY id DESC LIMIT 1;"
         results = connectToMySQL('dojo_survey_schema').query_db(query)
         return results
+    
+    @staticmethod
+    def validate_survey(post_data):
+        is_valid = True
+        
+        if len(post_data['name']) < 2:
+            flash("Name must be at least two characters.")
+            is_valid = False
+            
+        if len(post_data['location']) < 3:
+            flash("Please enter a valid location.")
+            is_valid = False
+            
+        if len(post_data['language']) < 1:
+            flash("Please enter a Language.")
+            is_valid =  False
+            
+        if len(post_data['comment']) < 1:
+            flash("Please enter a comment.")
+            is_valid = False
+            
+        return is_valid

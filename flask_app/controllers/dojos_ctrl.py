@@ -10,6 +10,9 @@ def index():
 
 @app.route('/create/', methods = ['POST'])
 def creates_survey():
+    if not Dojo.validate_survey(request.form):
+        return redirect('/')
+
     dojos = Dojo.create(request.form)
 
     return redirect('/survey/results')

@@ -30,11 +30,19 @@
                         <option value="Guugu Yimithirr">
                     </datalist>
                     </p>
-                <p>Comments (optional)
+                <p>Comments (not optional)
                     <textarea name="comment" id="comment" cols="30" rows="5"></textarea></p>
                     <input class="button" type="submit" name="Submit">
             </form>
-    </div>
+            
+        </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
 </body>
 
 </html>
