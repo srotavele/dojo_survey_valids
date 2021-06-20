@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'style.css') }}">
+</head>
+<title>dojo_survey</title>
+
+<body>
+    <div class="container">
+            <form action="/results" method="post">
+                    <p>Your Name: <input type='text' name="name"></p>
+                    <p> Dojo Location: <input list="locations" name="locations">
+                        <datalist id="locations">
+                            <option value="South of Heaven">
+                            <option value="Land of Nod">
+                            <option value="Neverland">
+                            <option value="East of Eden">
+                        </datalist>
+                    </p>
+                    <p>Favorite Language: <input list="languages" name="languages">
+                    <datalist id="languages">
+                        <option value="Archi">
+                        <option value="Sumerian">
+                        <option value="!Xóõ">
+                        <option value="Guugu Yimithirr">
+                    </datalist>
+                    </p>
+                <p>Comments (optional)
+                    <textarea name="comments" id="comments" cols="30" rows="5"></textarea></p> 
+                    <input class="button" type="submit" name="Submit">
+            </form>
+        
+    </div>
+</body>
+
+</html>
