@@ -1,17 +1,9 @@
 @import "./reset.css ";
 
 .container {
-  background: #24c6dc; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #514a9d,
-    #24c6dc
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #514a9d,
-    #24c6dc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #24c6dc;
+  background: -webkit-linear-gradient(to right, #514a9d, #24c6dc);
+  background: linear-gradient(to right, #514a9d, #24c6dc);
 
   height: 300px;
   width: 320px;
@@ -23,6 +15,7 @@
 .submit_box {
   height: 300px;
   width: 300px;
+  border-radius: 2px;
 }
 
 h1 {

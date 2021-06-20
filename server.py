@@ -1,5 +1,5 @@
 from flask_app import app
-from flask_app.controllers import display_ctrl, login_ctrl
+from flask_app.controllers import dojos_ctrl
 
 
 

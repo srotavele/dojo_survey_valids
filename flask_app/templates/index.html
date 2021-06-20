@@ -11,18 +11,19 @@
 
 <body>
     <div class="container">
-            <form action="/results" method="post">
+            <form action="/create/" method="post">
+                <h1>Take This Survey, Please!</h1>
                     <p>Your Name: <input type='text' name="name"></p>
-                    <p> Dojo Location: <input list="locations" name="locations">
-                        <datalist id="locations">
+                    <p> Dojo Location: <input list="location" name="location">
+                        <datalist id="location">
                             <option value="South of Heaven">
                             <option value="Land of Nod">
                             <option value="Neverland">
                             <option value="East of Eden">
                         </datalist>
                     </p>
-                    <p>Favorite Language: <input list="languages" name="languages">
-                    <datalist id="languages">
+                    <p>Favorite Language: <input list="language" name="language">
+                    <datalist id="language">
                         <option value="Archi">
                         <option value="Sumerian">
                         <option value="!Xóõ">
@@ -30,10 +31,9 @@
                     </datalist>
                     </p>
                 <p>Comments (optional)
-                    <textarea name="comments" id="comments" cols="30" rows="5"></textarea></p> 
+                    <textarea name="comment" id="comment" cols="30" rows="5"></textarea></p>
                     <input class="button" type="submit" name="Submit">
             </form>
-        
     </div>
 </body>
 

@@ -13,12 +13,12 @@
             <h1>Submitted Info:</h1>
             <table>
                 <tr>
-                    <p>Your Name: {{ name }}</p>
-                    <p>Dojo Location: {{ locations }}</p>
-                    <p>Favorite Language: {{ languages }}</p>
-                    <p>Comments: {{ comments }}</p>
+                    <p>Your Name: {{ survey.name }}</p>
+                    <p>Dojo Location: {{ survey.location }}</p>
+                    <p>Favorite Language: {{ survey.language }}</p>
+                    <p>Comment: {{ survey.comment }}</p>
                 </tr>
-                <button class="button">Go Back</button>
+                <a href='/'>Go Back</a>
             </table>
         </div>
     </div>
